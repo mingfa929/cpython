@@ -1,3 +1,5 @@
+# cpython源码编译方法
+# 参考：https://realpython.com/cpython-source-code-guide/
 git clone https://github.com/python/cpython
 cd cpython
 git checkout -b 3.10 origin/3.10

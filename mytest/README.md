@@ -4,9 +4,16 @@ gcc -g -O0 -shared -o example.so example.c -I$HOME/anaconda3/envs/numbaenv/inclu
 2. run  
 python example.py  
 
-3. gdb debug  
-gdb --args /opt/python/3.10/bin/python3 example.py
-ps: 直接指定python路径
+3. gdb debug
+- Debugging C/C++ and CPython using GDB 7's new Python extension support  
+- Debugging shared libraries loaded from Python with GDB  
+- Debugging CPython with GDB  
+参考：https://devguide.python.org/gdb/  
+PS1: python-gdb的配置参考 [text](gdb-config/README.md)  
+PS2: gdb版本要带--with-python源码构建，cpython版本要带--with-pydebug源码构建，参考：[text](build_cpython.sh)。  
+
+gdb --args /opt/python/3.10/bin/python3 example.py  
+PS: 直接指定python路径  
 ```
 wangmingfa@n37-003-157:~/code/github/mingfa929/cpython/mytest$ gdb --args /opt/python/3.10/bin/python3 example.py 
 Reading symbols from /opt/python/3.10/bin/python3...
